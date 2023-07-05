@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customer
+  name: order
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: customer
+      app: order
   template:
     metadata:
       labels:
-        app: customer
+        app: order
     spec:
       containers:
-      - name: customer
-        image: aymane2001/customer:tag
+      - name: order
+        image: aymane2001/order:tag
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "500Mi"
+            cpu: "5G"
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
