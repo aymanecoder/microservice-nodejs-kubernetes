@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: amigoscode/kubernetes:frontend-v1
+          image: aymane2001/front:tag
           resources:
             requests:
               memory: "128Mi"
